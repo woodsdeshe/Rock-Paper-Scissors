@@ -39,17 +39,17 @@ public abstract class Player {
         // First if statement checks to see if player and their opponent have made moves
         if (playerMove.isPresent() && opponentMove.isPresent()) {
 
-            /** If both players have made moves, and the player beats opponent, player wins, opponent loses, and the
+            /* If both players have made moves, and the player beats opponent, player wins, opponent loses, and the
             player score gets increases by 1
-             **/
+             */
             if (playerMove.get().beats(opponentMove.get())) {
                 setWinner(true);
                 opponenet.setWinner(false);
                 setScore(getScore() + 1);
 
-                /** If both players have made moves, and the opponent beats player, opponent wins, player loses, and the
+                /* If both players have made moves, and the opponent beats' player, opponent wins, player loses, and the
                  opponent score gets increases by 1
-                 **/
+                 */
             } else if (opponentMove.get().beats(playerMove.get())) {
                 opponenet.setWinner(true);
                 setWinner(false);
