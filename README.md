@@ -147,7 +147,7 @@ function resetGame() {
 
 ### Useful resources
 
-- [Grid System - Bootstrap](https://getbootstrap.com/docs/5.3/layout/grid/) - This website helped me to execute some of the styling that I created in the wireframe. This also helped with the gameboard formatting and easy spacing within the style of the game.
+- [Switch Case is Java](https://stackoverflow.com/questions/70918707/cannot-get-java-switch-statement-in-my-rock-paper-scissors-game-to-work-properly) - This thread in Stackoverflow helped me to figure out how to implement switch case within my game
 - [MDN](https://developer.mozilla.org/en-US/) - This site helped me with understanding certain methods for arrays and how to utitlize them in my code
 
 ## Acknowledgments
