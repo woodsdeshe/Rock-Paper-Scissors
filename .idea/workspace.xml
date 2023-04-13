@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9276f7d8-eda9-4240-bc8f-334464397406" name="Changes" comment="Additional game logic added to RockPaperScissorsGame">
+    <list default="true" id="9276f7d8-eda9-4240-bc8f-334464397406" name="Changes" comment="Working game logic added to Rock, Paper, and Scissors classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Move.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Paper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Paper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RockPaperScissorsGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RockPaperScissorsGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Scissors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scissors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +92,7 @@
       <updated>1681330101796</updated>
       <workItem from="1681330103178" duration="5654000" />
       <workItem from="1681346418205" duration="120000" />
-      <workItem from="1681398945433" duration="11293000" />
+      <workItem from="1681398945433" duration="12730000" />
     </task>
     <task id="LOCAL-00001" summary="First push">
       <created>1681331118118</created>
@@ -158,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681414233359</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Working game logic added to Rock, Paper, and Scissors classes">
+      <created>1681417830673</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681417830673</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +178,7 @@
     <MESSAGE value="Implemented Move interface to Rock, Paper, and Scissors classes" />
     <MESSAGE value="Created HumanPlayer class and started implementing while loop that handles player options" />
     <MESSAGE value="Additional game logic added to RockPaperScissorsGame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional game logic added to RockPaperScissorsGame" />
+    <MESSAGE value="Working game logic added to Rock, Paper, and Scissors classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working game logic added to Rock, Paper, and Scissors classes" />
   </component>
 </project>

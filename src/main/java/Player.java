@@ -31,6 +31,7 @@ public abstract class Player {
         this.move = move;
     }
 
+    // play method takes in both players moves and determines who is the winner
     public void play(Player opponent) {
         // playerMove & opponentMove utilizes getMove to retrieve the player and opponent moves
         Optional<Move> playerMove = getMove();
@@ -61,9 +62,12 @@ public abstract class Player {
                 opponent.setWinner(false);
             }
         } else {
+            // If no move is chosen then there is no winner
             setWinner(false);
             opponent.setWinner(false);
         }
     }
+
+    // chooseMove() is an abstract method that grabs the move of the current player, whether human or computer
     public abstract void chooseMove();
 }
