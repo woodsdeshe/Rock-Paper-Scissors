@@ -148,7 +148,7 @@ function resetGame() {
 ### Useful resources
 
 - [Switch Case is Java](https://stackoverflow.com/questions/70918707/cannot-get-java-switch-statement-in-my-rock-paper-scissors-game-to-work-properly) - This thread in Stackoverflow helped me to figure out how to implement switch case within my game
-- [MDN](https://developer.mozilla.org/en-US/) - This site helped me with understanding certain methods for arrays and how to utitlize them in my code
+- [Medium: Rock Paper Scissors](https://medium.com/geekculture/how-to-code-a-simple-rock-paper-scissors-game-in-java-7ec5dda68be1) - This blog post helped me plan out the general structure of how the game logic would go. It also helped me double check my code to make sure that it's clean and readable.
 
 ## Acknowledgments
 
