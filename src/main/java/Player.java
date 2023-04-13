@@ -31,10 +31,10 @@ public abstract class Player {
         this.move = move;
     }
 
-    public void play(Player opponenet) {
+    public void play(Player opponent) {
         // playerMove & opponentMove utilizes getMove to retrieve the player and opponent moves
         Optional<Move> playerMove = getMove();
-        Optional<Move> opponentMove = opponenet.getMove();
+        Optional<Move> opponentMove = opponent.getMove();
 
         // First if statement checks to see if player and their opponent have made moves
         if (playerMove.isPresent() && opponentMove.isPresent()) {
@@ -44,22 +44,25 @@ public abstract class Player {
              */
             if (playerMove.get().beats(opponentMove.get())) {
                 setWinner(true);
-                opponenet.setWinner(false);
+                opponent.setWinner(false);
                 setScore(getScore() + 1);
 
                 /* If both players have made moves, and the opponent beats' player, opponent wins, player loses, and the
                  opponent score gets increases by 1
                  */
             } else if (opponentMove.get().beats(playerMove.get())) {
-                opponenet.setWinner(true);
+                opponent.setWinner(true);
                 setWinner(false);
-                opponenet.setScore(opponenet.getScore() + 1);
+                opponent.setScore(opponent.getScore() + 1);
 
                  // If it's a tie, both players setWinner equals false
             } else {
                 setWinner(false);
-                opponenet.setWinner(false);
+                opponent.setWinner(false);
             }
+        } else {
+            setWinner(false);
+            opponent.setWinner(false);
         }
     }
     public abstract void chooseMove();

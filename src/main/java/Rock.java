@@ -2,6 +2,6 @@ public class Rock implements Move{
 
     @Override
     public boolean beats(Move move) {
-        return false;
+        return move instanceof Scissors;
     }
 }
