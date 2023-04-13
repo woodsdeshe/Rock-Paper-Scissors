@@ -19,7 +19,7 @@ public class HumanPlayer extends Player{
 
             /*
              Switch case takes in the player input and sets a new instance of a certain class based on if it matches
-             the strings within the case, then breaks the code.
+             the strings within the case, then ends the loop.
              The Optional.of creates an Optional instance with a non-null value if the player has made a move, if not,
              it returns an empty instance of Optional
             */
