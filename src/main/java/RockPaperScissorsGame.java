@@ -5,11 +5,21 @@ public class RockPaperScissorsGame {
         // Allows user to type in responses in console
         Scanner input = new Scanner(System.in);
 
-        // Prompts user to play with computer or another player
-        System.out.println("Enter 1 to play against the computer or 2 to play against another human player");
-
-        // numPlayers takes in the int needed in order to pick which option the player wants to do
-        int numPlayers = input.nextInt();
+        int numPlayers;
+        do {
+            // Prompts user to play with computer or another player
+            System.out.println("Enter 1 to play against the computer or 2 to play against another human player");
+            /*
+             If user puts in invalid input, it will print an invalid input
+             repsonse and ask the user to select 1 or 2
+            */
+            while (!input.hasNextInt()) {
+                System.out.println("Invalid input. Please enter 1 or 2.");
+                input.next();
+            }
+            // numPlayers takes in the int needed in order to pick which option the player wants to do
+            numPlayers = input.nextInt();
+        } while (numPlayers != 1 && numPlayers != 2);
         input.nextLine();
 
         // Declaring a player1 and player2 of Player type and gives it a value of null
@@ -23,14 +33,11 @@ public class RockPaperScissorsGame {
             player2 = new ComputerPlayer();
 
             // If numPlayers equals 2, the player2 initializes a new HumanPLayer instance
-        } else if (numPlayers == 2){
+        } else if (numPlayers == 2) {
             player2 = new HumanPlayer();
-        } else {
-            //If neither number is pressed, it will prompt the player to choose 1 or 2
-            System.out.println("Please enter 1 or 2");
         }
 
-        while (true){
+        while (true) {
             System.out.println("Player 1's turn:");
             // player1 uses chooseMove() method to grab player1's move
             player1.chooseMove();
@@ -91,15 +98,11 @@ public class RockPaperScissorsGame {
             String playAgain = input.nextLine().toLowerCase();
 
             // If the player chooses "n" then the console with stop
-            if (playAgain.equals("n")){
+            if (playAgain.equals("n")) {
                 break;
             }
         }
 
         input.close();
-
-
-
-
     }
 }
