@@ -3,15 +3,12 @@ import java.util.Scanner;
 
 public class HumanPlayer extends Player{
 
-    private Move move;
-    private int score;
-
     @Override
     public void chooseMove() {
         Scanner scanner = new Scanner(System.in);
         Optional<Move> moveOptional = Optional.empty();
 
-        while (!moveOptional.isPresent()) {
+        while (moveOptional.isEmpty()) {
             // The while loop runs the player options while getMove returns empty
             System.out.println("Please choose one of the following moves: rock, paper, or scissors");
 
@@ -36,12 +33,9 @@ public class HumanPlayer extends Player{
 
         }
         // Retrieves the value of the current moveOptional and stores it in the move variable
-        move = moveOptional.get();
+        Move move = moveOptional.get();
     }
 
-    @Override
-    public Optional<Move> getMove() {
-        return Optional.ofNullable(move);
-    }
+
 
 }

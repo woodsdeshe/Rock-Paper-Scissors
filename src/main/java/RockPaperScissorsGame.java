@@ -11,7 +11,7 @@ public class RockPaperScissorsGame {
             System.out.println("Enter 1 to play against the computer or 2 to play against another human player");
             /*
              If user puts in invalid input, it will print an invalid input
-             repsonse and ask the user to select 1 or 2
+             response and ask the user to select 1 or 2
             */
             while (!input.hasNextInt()) {
                 System.out.println("Invalid input. Please enter 1 or 2.");
@@ -23,7 +23,7 @@ public class RockPaperScissorsGame {
         input.nextLine();
 
         // Declaring a player1 and player2 of Player type and gives it a value of null
-        Player player1, player2 = null;
+        Player player1, player2;
 
         // player1 initializes a new HumanPlayer instance
         player1 = new HumanPlayer();
@@ -33,7 +33,7 @@ public class RockPaperScissorsGame {
             player2 = new ComputerPlayer();
 
             // If numPlayers equals 2, the player2 initializes a new HumanPLayer instance
-        } else if (numPlayers == 2) {
+        } else {
             player2 = new HumanPlayer();
         }
 
@@ -54,7 +54,6 @@ public class RockPaperScissorsGame {
                 // to grab the choice of player2
             } else {
                 System.out.println("Player 2's turn");
-                assert player2 != null;
                 player2.chooseMove();
             }
 
