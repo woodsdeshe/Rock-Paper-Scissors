@@ -3,12 +3,16 @@ import java.util.Scanner;
 
 public class HumanPlayer extends Player{
 
+    private Move move;
+    private int score;
+
     @Override
     public void chooseMove() {
         Scanner scanner = new Scanner(System.in);
+        Optional<Move> moveOptional = Optional.empty();
 
-        // The while loop runs the player options while getMove returns empty
-        do {
+        while (!moveOptional.isPresent()) {
+            // The while loop runs the player options while getMove returns empty
             System.out.println("Please choose one of the following moves: rock, paper, or scissors");
 
             /*
@@ -24,11 +28,20 @@ public class HumanPlayer extends Player{
              it returns an empty instance of Optional
             */
             switch (input) {
-                case "rock" -> setMove(Optional.of(new Rock()));
-                case "paper" -> setMove(Optional.of(new Paper()));
-                case "scissors" -> setMove(Optional.of(new Scissors()));
+                case "rock" -> moveOptional = Optional.of(new Rock());
+                case "paper" -> moveOptional = Optional.of(new Paper());
+                case "scissors" -> moveOptional = Optional.of(new Scissors());
+                default -> System.out.println("Invalid input.");
             }
 
-        } while (getMove().isEmpty());
+        }
+        // Retrieves the value of the current moveOptional and stores it in the move variable
+        move = moveOptional.get();
     }
+
+    @Override
+    public Optional<Move> getMove() {
+        return Optional.ofNullable(move);
+    }
+
 }
